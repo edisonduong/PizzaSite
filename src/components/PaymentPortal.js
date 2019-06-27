@@ -2,18 +2,17 @@ import React, { Component } from 'react';
 import './Transportation'
 
 class PaymentPortal extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         
         this.cashOption = this.cashOption.bind(this);
         this.enterCardInfo = this.enterCardInfo.bind(this);
         this.submitOrder = this.submitOrder.bind(this);
         this.state = {
             paymentType: "",
-            activate: global.payment,
             choosePayment:
             <div>
-            <h3>Cash or credit</h3>
+            <h3>Payment Method</h3>
             <input type="radio"
             name="paymentType"
             value="0"
@@ -100,12 +99,14 @@ class PaymentPortal extends Component {
             enterCardInfo: "",
             orderButton: ""
         })
+        return (
+            this.props.callApi
+        )
     }
 
     render() {
         return (
             <div>
-                <h3>Order details</h3>
                 { this.state.choosePayment }
                 { this.state.enterCardInfo }
                 { this.state.orderButton }
