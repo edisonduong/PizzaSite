@@ -9,10 +9,6 @@ class PaymentPortal extends Component {
         this.enterCardInfo = this.enterCardInfo.bind(this);
         this.submitOrder = this.submitOrder.bind(this);
         this.state = {
-            orderSummary:
-            <div>
-            <h2>*Contains Pizza Info (pizza, cost, delivery time)*</h2>
-            </div>,
             paymentType: "",
             activate: global.payment,
             choosePayment:
@@ -101,7 +97,6 @@ class PaymentPortal extends Component {
                 <p>Estimated time: *time*</p>
             </div>,
             choosePayment: "",
-            orderSummary: "",
             enterCardInfo: "",
             orderButton: ""
         })
@@ -111,7 +106,6 @@ class PaymentPortal extends Component {
         return (
             <div>
                 <h3>Order details</h3>
-                { this.state.orderSummary }
                 { this.state.choosePayment }
                 { this.state.enterCardInfo }
                 { this.state.orderButton }
