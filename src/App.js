@@ -5,7 +5,7 @@ import './App.css';
 function main() {
   return (
     <div className="App">
-      <h1>Eddie's Famous Pizzeria</h1>
+      <h1>Eddie's Famous Pizzeria!</h1>
       <Transportation/>
     </div>
   );
