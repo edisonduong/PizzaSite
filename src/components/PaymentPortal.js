@@ -93,7 +93,7 @@ class PaymentPortal extends Component {
             orderComplete:
             <div>
                 <h4>We've recieved your order!</h4>
-                <p>Estimated time: *time*</p>
+                <p>Estimated time: 15 Minutes</p>
             </div>,
             choosePayment: "",
             enterCardInfo: "",

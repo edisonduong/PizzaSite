@@ -99,8 +99,8 @@ class Transportation extends Component {
                     <div className="moduleHeader">Enter in Pickup information</div>
                     <br/>
                         <div className="left-text">
-                            Name: <input name="name" type="text" value={this.state.customerName} onChange={(e) => this.handleCustomerName(e)}/><br/>
-                            Phone Number: <input name="name" type="text" value={this.state.phoneNumber} onChange={(e) => this.handlePhoneNumber(e)}/><br/>
+                            <input placeholder="Name" name="name" type="text" value={this.state.customerName} onChange={(e) => this.handleCustomerName(e)} required/><br/>
+                            <input placeholder="Phone Number" name="name" type="text" value={this.state.phoneNumber} onChange={(e) => this.handlePhoneNumber(e)} required/><br/>
                         </div>
                         <br/>
                         <br/>
@@ -115,11 +115,11 @@ class Transportation extends Component {
                     <div className="moduleHeader">Enter in delivery information</div>
                     <br/>
                         <div className="left-text">
-                            Name: <input name="name" type="text" value={this.state.customerName} onChange={(e) => this.handleCustomerName(e)}/><br/>
-                            Phone Number: <input name="name" type="text" value={this.state.phoneNumber} onChange={(e) => this.handlePhoneNumber(e)}/><br/>
-                            City: <input name="name" type="text" value={this.state.city} onChange={(e) => this.handleCity(e)}/><br/>
-                            Address: <input name="name" type="text" value={this.state.address} onChange={(e) => this.handleAddress(e)}/><br/>
-                            Special Notes: <input name="name" type="text" value={this.state.specialNotes} onChange={(e) => this.handleSpecialNotes(e)}/><br/>
+                            <input placeholder="Name" name="name" type="text" value={this.state.customerName} onChange={(e) => this.handleCustomerName(e)} required/><br/>
+                            <input placeholder="Phone Number" name="name" type="text" value={this.state.phoneNumber} onChange={(e) => this.handlePhoneNumber(e)} required/><br/>
+                            <input placeholder="City" name="name" type="text" value={this.state.city} onChange={(e) => this.handleCity(e)} required/><br/>
+                            <input placeholder="Address" name="name" type="text" value={this.state.address} onChange={(e) => this.handleAddress(e)} required/><br/>
+                            <input placeholder="Special Notes For Driver" name="name" type="text" value={this.state.specialNotes} onChange={(e) => this.handleSpecialNotes(e)} required/><br/>
                         </div>
                         <br/>
                         <br/>
@@ -133,7 +133,7 @@ class Transportation extends Component {
         this.setState({
             pizzaBuilder:
             <div>
-                <p>Welcome, <strong>{this.state.customerName}</strong></p>
+                <p><strong>Welcome, {this.state.customerName}</strong></p>
                 <h3>Pizza Customizer</h3>
                 <h4>Select size</h4>
                 <div value={this.state.pizzaSize} onChange={(e) => this.handlePizzaSize(e)}>
