@@ -290,7 +290,7 @@ class Transportation extends Component {
                     {/* calculate order cost */}
                     <div className="orderDetail">Subtotal: <strong>${this.state.pizzaCost.toFixed(2)}</strong></div>
                     <div className="orderDetail">Delivery cost: <strong>${this.state.deliveryCost.toFixed(2)}</strong></div>
-                    <div className="orderDetail">Tax: <strong>${this.state.tax}</strong></div>
+                    <div className="orderDetail">Tax: <strong>${(this.state.totalCost * .07).toFixed(2)}</strong></div>
                     <div className="orderDetail">Total: <strong>${(this.state.totalCost * 1.07).toFixed(2)}</strong></div>
 
                     <div className="orderDetail">Pizza Size: <strong>{this.state.pizzaSize}</strong></div>
